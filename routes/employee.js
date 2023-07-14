@@ -18,15 +18,12 @@ router.post('/', async (req, res) => {
   }
 });
 
-Get all employees
+//Get all employees
 router.get('/', async (req, res) => {
   
   try {
     
     const employees = await Employee.find()
-
-    
-
     res.status(200).json(employees);
     
   } catch (error) {
